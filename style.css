@@ -9,7 +9,7 @@
 }
 #login{
  	padding:50px 0;
-	background-image: url(Images/sky-and-tree.jpg);
+	background-image: url("Images/sky-and-tree.jpg");
 	background-size: cover;
 }
 .main-section{
