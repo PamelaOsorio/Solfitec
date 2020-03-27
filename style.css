@@ -1,4 +1,4 @@
-
+font-family: 'Playfair Display';
 #cover{
 	background: url("Images/por-do-sol.jpg");
 	background-size: cover;
@@ -17,7 +17,7 @@
 	padding: 0;
 }
 #login .model-content{
-	background-color: #20d6b4;
+	background-color: #f03e08;
 	opacity: .95;
 	padding: 30px;
 	border-radius: 10px;
