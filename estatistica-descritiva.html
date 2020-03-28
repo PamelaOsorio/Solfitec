@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Estatística Descritiva</title>
+</head>
+<body>
+	<button type="submit" onclick="entradadosdados()" id="buttondeentrada">Entrar com os dados</button>
+	<div class="dropdown">
+
+  		<button onclick="menudropdown()" class="dropbtn">Tipo de Descritiva</button>
+ 		<div id="tipos-descritivos" class="dropdown-content">
+    	<a href="#">Nominal</a>
+    	<a href="#">Ordinal</a>
+    	<a href="#">Discreta</a>
+    	<a href='#'>Continua</a>
+ 	</div>
+</div> 
+	<div id="visutabela">
+
+		<table id="tabela">
+			<th>
+				<td>fi</td>
+				<td>f%</td>
+				<td>facm</td>
+				<td>facm%</td>
+			</th>	
+		</table>
+		
+	</div>
+
+
+  <script src="javascript.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</body>
+</html>
