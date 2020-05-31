@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Estatística Descritiva</title>
+</head>
+<body>
+	
+  </body>
+  
+  		<input type="file" id="fileUpload" />
+  		<input type="button" id="upload" value="Upload" onclick="Upload()" />
+ 		 <hr />
+		  <div id="dvExcel"></div>
+		  
+  		<button onclick="menudropdown()" class="dropbtn">Tipo de Descritiva</button>
+ 		<div id="tipos-descritivos" class="dropdown-content">
+    	<a href="#">Nominal</a>
+    	<a href="#">Ordinal</a>
+    	<a href="#">Discreta</a>
+    	<a href='#'>Continua</a>
+	 </div>
+	 <style>
+		body{background: rgb(247, 244, 244)}
+		table{background: rgb(0, 0, 0); font-weight: 600;}
+		h1,p{font-family:arial;}
+		p{font-family:arial;color: rgb(247, 244, 244);}
+		th,td{ border: 2px solid ;color: rgb(247, 244, 244);}
+		th{font-family: arial;}
+		td{padding:5px}
+		table{width:100%}
+		
+	</style>
+	<p>
+	 <input type="text" id='variavel' placeholder="Variavel pesquisada">
+	 </p>
+	 <p>                                                              </p>
+	 <p>
+	 <input type="text" id='valores' placeholder="Digitar valores utilizando (;) entre os números">
+	 </p>  
+	<button type="submit" onclick="entradadosdado()" id="buttondeentrada">Entrar com os dados</button>
+	<p>
+
+	</p>
+	</div>
+    <div id="visutabela">
+		<table id="tabela">
+			<p>
+
+			</p>
+		</table>
+	</div>
+	<body>
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+	
+	</script>
+  </head>
+  <body>
+	<!-- Identify where the chart should be drawn. -->
+	<div id="Chart"></div>
+  </body>
+   
+
+  <script src="javascript.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</body>
+</html>
