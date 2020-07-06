@@ -240,13 +240,18 @@ for( i = 0; i< splitados.length; i++){
 		k = 40
 		valor = 100 - k
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((k2 == somaa[i] && (somaa[i] - cont2[i] <= k2))){
-					quintilvalor = splitados[i]
-				
-				}
+			for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > k2){
+                           
+                                 poskD = i
 			}
 		}
+		quintilvalor = splitados[poskD]
+				
+				
+				}
+			
+		
 				quintilvalor = (`${k}% dos(as) ${variavel} é de ${quintilvalor} ou menos e ${valor}% é de ${quintilvalor} ou mais`)
                 document.getElementById('quintilvalor').innerHTML = quintilvalor;
 	}
@@ -255,12 +260,13 @@ for( i = 0; i< splitados.length; i++){
 		k = 60
 		valor =  100 - k
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((k3 == somaa[i] && (somaa[i] - cont2[i] <= k3))){
-					quintilvalor = splitados[i]
-				
-				}
+			for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > k3){
+                                 poskD = i
 			}
+		}
+		quintilvalor = splitados[poskD]
+				
 		}
 		       quintilvalor = (`${k}% dos(as) ${variavel} é de ${quintilvalor} ou menos e ${valor}% é de ${quintilvalor} ou mais`)
                 document.getElementById('quintilvalor').innerHTML = quintilvalor;
@@ -270,12 +276,15 @@ for( i = 0; i< splitados.length; i++){
 		k = 80
 		valor = 100 - k
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((k4 == somaa[i] && (somaa[i] - cont2[i] <= k4))){
-					quintilvalor = splitados[i]
-				
-				}
+			for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > k4){
+                                 poskD = i
 			}
+		}
+		quintilvalor = splitados[poskD]
+				
+				
+			
 		}
 		       quintilvalor = (`${k}% dos(as) ${variavel} é de ${quintilvalor} ou menos e ${valor}% é de ${quintilvalor} ou mais`)
                 document.getElementById('quintilvalor').innerHTML = quintilvalor;
@@ -284,13 +293,16 @@ for( i = 0; i< splitados.length; i++){
 		k5 = (soma * 1.0).toFixed(0)
 		k = 100
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((k5 == somaa[i] && (somaa[i] - cont2[i] <= k5))){
-					quintilvalor = splitados[i]
+			for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > k5){
+                                 poskD = i
+				
 				
 				}
 
 			}
+                    		quintilvalor = splitados[poskD]
+
 		}
 		       quintilvalor = (`${k}% dos(as) ${variavel} é de ${quintilvalor}`)
                 document.getElementById('quintilvalor').innerHTML = quintilvalor;
@@ -307,13 +319,22 @@ for( i = 0; i< splitados.length; i++){
 		q1 = (soma * 0.25).toFixed(0)
 		q = 25
 		valor =  100 - q
+                var poskQ = 0
 		for(i = 0; i< splitados.length; i++){		
 			for(i = 0; i< somaa.length; i++){
-				if((q1 == somaa[i] && (somaa[i] - cont2[i] <= q1))){
-					quartilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > q1){
+                                 poskQ = i
+				
 				
 				}
-			}
+                        }
+			
+                    		quartilvalor = splitados[poskQ]
+
+		
+				
+			
 		}
 				quartilvalor = (`${q}% dos(as) ${variavel} é de ${quartilvalor} ou menos e ${valor}% é de ${quartilvalor} ou mais`)
                 document.getElementById('quartilvalor').innerHTML = quartilvalor;
@@ -323,12 +344,21 @@ for( i = 0; i< splitados.length; i++){
 		q = 50
 		valor =  100 - q
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((q2 == somaa[i] && (somaa[i] - cont2[i] <= q2))){
-					quartilvalor = splitados[i]
+			for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > q2){
+                                 poskQ = i
+				
 				
 				}
-			}
+                        }
+			
+                    		quartilvalor = splitados[poskQ]
+
+		
+				
+			
+		
+			
 		}
 				quartilvalor = (`${q}% dos(as) ${variavel} é de ${quartilvalor} ou menos e ${valor}% é de ${quartilvalor} ou mais`)
                 document.getElementById('quartilvalor').innerHTML = quartilvalor;
@@ -338,12 +368,20 @@ for( i = 0; i< splitados.length; i++){
 		q = 75
 		valor =  100 - q
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((q3 == somaa[i] && (somaa[i] - cont2[i] <= q3))){
-					quartilvalor = splitados[i]
+			for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > q3){
+                                 poskQ = i
+				
 				
 				}
-			}
+                        }
+			
+                    		quartilvalor = splitados[poskQ]
+
+		
+				
+			
+		
 		}
 		       quartilvalor = (`${q}% dos(as) ${variavel} é de ${quartilvalor} ou menos e ${valor}% é de ${quartilvalor} ou mais`)
                 document.getElementById('quartilvalor').innerHTML = quartilvalor;
@@ -352,12 +390,20 @@ for( i = 0; i< splitados.length; i++){
 		q4 = (soma * 1.0).toFixed(0)
 		q = 100
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((q4 == somaa[i] && (somaa[i] - cont2[i] <= q4))){
-					quartilvalor = splitados[i]
+			   for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > q4){
+                                 poskQ = i
+				
 				
 				}
-			}
+                        }
+			
+                    		quartilvalor = splitados[poskQ]
+
+		
+				
+			
+		
 		}
 		        quartilvalor = (`${q}% dos(as) ${variavel} é de ${quartilvalor} `)
                 document.getElementById('quartilvalor').innerHTML = quartilvalor;
@@ -369,13 +415,22 @@ for( i = 0; i< splitados.length; i++){
 		d1 = (soma * 0.1).toFixed(0)
 		d = 10
 		valor =  100 - d
+                var poskDi = 0 
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d1 == somaa[i] && (somaa[i] - cont2[i] <= d1))){
-					decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d1){
+                                 poskDi = i
+				
 				
 				}
-			}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+			
+		
 		}
 		       decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} ou menos e ${valor}% é de ${decilvalor} ou mais`)
 				document.getElementById('decilvalor').innerHTML = decilvalor
@@ -385,12 +440,19 @@ for( i = 0; i< splitados.length; i++){
 		d = 20
 		valor =  100 - d
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d2 == somaa[i] && (somaa[i] - cont2[i] <= d2))){
-					decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d2){
+                                 poskDi = i
+				
 				
 				}
-			}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+			
 		}
 				decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} ou menos e ${valor}% é de ${decilvalor} ou mais`)
 				document.getElementById('decilvalor').innerHTML = decilvalor
@@ -400,12 +462,20 @@ for( i = 0; i< splitados.length; i++){
 		d = 30
 		valor =  100 - d
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d3 == somaa[i] && (somaa[i] - cont2[i] <= d3))){
-			       decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d3){
+                                 poskDi = i
+				
 				
 				}
-			}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+			
+			
 		}
 				decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} ou menos e ${valor}% é de ${decilvalor} ou mais`)
 				document.getElementById('decilvalor').innerHTML = decilvalor
@@ -415,13 +485,19 @@ for( i = 0; i< splitados.length; i++){
 		d = 40
 		valor =  100 - d
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d4 == somaa[i] && (somaa[i] - cont2[i] <= d4))){
-					decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d4){
+                                 poskDi = i
+				
 				
 				}
-			}
-		}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+                   }
 				decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} ou menos e ${valor}% é de ${decilvalor} ou mais`)
 				document.getElementById('decilvalor').innerHTML = decilvalor
 	}
@@ -430,12 +506,22 @@ for( i = 0; i< splitados.length; i++){
 		d = 50
 		valor =  100 - d
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d5 == somaa[i] && (somaa[i] - cont2[i] <= d5))){
-					decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d5){
+                                 poskDi = i
+				
 				
 				}
-			}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+			
+				
+				
+			
 		}
 				decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} ou menos e ${valor}% é de ${decilvalor} ou mais`)
 				document.getElementById('decilvalor').innerHTML = decilvalor
@@ -445,12 +531,19 @@ for( i = 0; i< splitados.length; i++){
 		d = 60
 		valor =  100 - d
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d6 == somaa[i] && (somaa[i] - cont2[i] <= d6))){
-					decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d6){
+                                 poskDi = i
+				
 				
 				}
-			}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+			
 		}
 				decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} ou menos e ${valor}% é de ${decilvalor} ou mais`)
 				document.getElementById('decilvalor').innerHTML = decilvalor
@@ -460,12 +553,20 @@ for( i = 0; i< splitados.length; i++){
 		d = 70
 		valor =  100 - d
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d7 == somaa[i] && (somaa[i] - cont2[i] <= d7))){
-					decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d7){
+                                 poskDi = i
+				
 				
 				}
-			}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+			
+			
 		}
 		decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} ou menos e ${valor}% é de ${decilvalor} ou mais`)
 		document.getElementById('decilvalor').innerHTML = decilvalor
@@ -475,12 +576,19 @@ for( i = 0; i< splitados.length; i++){
 		d = 80
 		valor =  100 - d
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d8 == somaa[i] && (somaa[i] - cont2[i] <= d8))){
-					decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d8){
+                                 poskDi = i
+				
 				
 				}
-			}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+			
 		}
 				decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} ou menos e ${valor}% é de ${decilvalor} ou mais`)
 				document.getElementById('decilvalor').innerHTML = decilvalor
@@ -490,12 +598,19 @@ for( i = 0; i< splitados.length; i++){
 		d = 90
 		valor =  100 - d
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d9 == somaa[i] && (somaa[i] - cont2[i] <= d9))){
-					decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d9){
+                                 poskDi = i
+				
 				
 				}
-			}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+			
 		}
 	        	decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} ou menos e ${valor}% é de ${decilvalor} ou mais`)
 				document.getElementById('decilvalor').innerHTML = decilvalor
@@ -504,12 +619,19 @@ for( i = 0; i< splitados.length; i++){
 		d10 = (soma * 1.0).toFixed(0)
 		d = 100
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((d10 == somaa[i] && (somaa[i] - cont2[i] <= d10))){
-					decilvalor = splitados[i]
+				for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > d10){
+                                 poskDi = i
+				
 				
 				}
-			}
+                        }
+			
+                    		decilvalor = splitados[poskDi]
+
+		
+				
+			
 		}
 		      decilvalor = (`${d}% dos(as) ${variavel} é de ${decilvalor} `)
 			  document.getElementById('decilvalor').innerHTML = decilvalor
