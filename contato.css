@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(250, 252, 164);
+    font-family: sans-serif;
+}
+
+form{
+    box-shadow: 1px 1px 5px #000;
+    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
+    padding: 30px;
+    border-radius: 50px;
+    width: 750px;
+    margin: auto;
+    padding-top: 40px;
+    color: black;
+}
+
+p{
+    text-align: center;
+    color: white
+}
+
+.card-group{
+    margin-bottom: 11px;
+}
+
+.card-group > button{
+    background-color: rgb(250, 252, 164);
+    color: black;
+    border-radius: 45px;
+    border: 0px;
+    outline: 0;
+    width: 100%;
+    padding: 15px;
+}
+
+.card-title > h2{
+    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
+    font-size: 85px;
+    font-style: italic, oblique;
+    height: 100px;  
+    color: #000;
+}
+
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align: center;
+    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
+    color: white;
+    font-family: sans-serif;
+    font-size: large;
+    right: 0px;
+}
+
+.card-btn > button{
+    background-color: rgb(250, 252, 164);
+    color: black;
+    border-radius: 45px;
+    border: 0px;
+    outline: 0;
+    width: 100%;
+    padding: 15px;
+    position: center;    
+}
+
