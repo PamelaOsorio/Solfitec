@@ -710,7 +710,7 @@ for( i = 0; i< splitados.length; i++){
 		}
 		
 	
-	}
+	
 	
 	
 
@@ -1876,7 +1876,6 @@ if(tipodescritiva == "Qualitativa Ordinal"){
 				}
 				
 			
-			}
 			
 			
 		
