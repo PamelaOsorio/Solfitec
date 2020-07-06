@@ -1352,7 +1352,7 @@ if(tipodescritiva == "Qualitativa Ordinal"){
 			}
 			
 		
-		}
+		
 		
 		
 	
