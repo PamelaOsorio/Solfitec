@@ -220,13 +220,17 @@ for( i = 0; i< splitados.length; i++){
 		k1 = (soma * 0.2).toFixed(0)
 		k = 20
 		valor = 100 - k
+                var poskD = 0
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
-				if((k1 == somaa[i] && (somaa[i] - cont2[i] <= k1))){
-					quintilvalor = splitados[i]
-				
-				}
+			for(i = 0; i< cont2.length; i++){
+				if(cont2[i] > k1){
+                                 poskD = i
 			}
+		}
+		quintilvalor = splitados[poskD]
+				
+				
+			
 		}
 				quintilvalor = (`${k}% dos(as) ${variavel} é de ${quintilvalor} ou menos e ${valor}% é de ${quintilvalor} ou mais`)
                 document.getElementById('quintilvalor').innerHTML = quintilvalor;
