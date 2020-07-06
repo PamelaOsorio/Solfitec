@@ -205,7 +205,7 @@ for( i = 0; i< splitados.length; i++){
 		}
 		
 	
-	 MedianaTotal = (`Mediana: ${splitados[posMEDIANA}`)
+	 MedianaTotal = (`Mediana: ${splitados[posMEDIANA]}`)
           }			
 			
 		
