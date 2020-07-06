@@ -195,11 +195,17 @@ for( i = 0; i< splitados.length; i++){
 	//-----------------------------------Mediana------------------------------------------------//
 
 	var medianaTotal 
+	mediana = (soma * 0.5).toFixed(0)
+	var posMEDIANA = 0
 	for(i = 0; i< splitados.length; i++){		
-		for(i = 0; i< somaa.length; i++){
-			mediana = (soma * 0.5).toFixed(0)
-			if(( mediana == somaa[i] &&  somaa[i] - cont2[i] <= mediana)){
-					medianaTotal = splitados[i]
+		for(i = 0; i< cont2.length; i++){
+			if(cont2[i] > mediana){
+                             posMEDIANA = i
+			}
+		}
+		
+	}
+	 MedianaTotal = (`Mediana: ${splitados[posMEDIANA}`)
 				
 			}
 		}
