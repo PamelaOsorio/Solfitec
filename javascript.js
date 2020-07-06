@@ -210,7 +210,7 @@ for( i = 0; i< splitados.length; i++){
 			
 		
 		medianaT = (`Mediana: ${medianaTotal}`)
-       }
+       
 
 	//-----------------------------------Quintil------------------------------------------------//
 
@@ -321,7 +321,6 @@ for( i = 0; i< splitados.length; i++){
 		valor =  100 - q
                 var poskQ = 0
 		for(i = 0; i< splitados.length; i++){		
-			for(i = 0; i< somaa.length; i++){
 				for(i = 0; i< cont2.length; i++){
 				if(cont2[i] > q1){
                                  poskQ = i
