@@ -210,7 +210,7 @@ for( i = 0; i< splitados.length; i++){
 			
 		
 		medianaT = (`Mediana: ${medianaTotal}`)
-	
+       }
 
 	//-----------------------------------Quintil------------------------------------------------//
 
