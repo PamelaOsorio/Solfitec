@@ -712,22 +712,6 @@ for( i = 0; i< splitados.length; i++){
 	
 	}
 	
-	google.charts.load('current', {packages: ['corechart']});
-	google.charts.setOnLoadCallback(drawChart);
-
-	function drawChart() {
-		// Define the chart to be drawn.
-		var data = new google.visualization.DataTable();
-		data.addColumn('string', 'Element');
-		data.addColumn('number', 'soma');
-		data.addRows([ ['Variavel', somaa[i]] 
-	
-	  ]);
-	
-		
-  
-	  var chart = new google.visualization.ColumnChart(document.getElementById('Chart'));
-	  chart.draw(data, somaa[i]);
 	
 
 	  
@@ -828,7 +812,7 @@ console.log(min)
  console.log(Ic)
  var kVetor =[]
  //calculo da frequencia
- for( i= 0; i < k; i ++){
+ for( i= 0; i < K; i ++){
 	 kVetor[i] = K
 
 
@@ -1370,22 +1354,6 @@ if(tipodescritiva == "Qualitativa Ordinal"){
 		
 		}
 		
-		google.charts.load('current', {packages: ['corechart']});
-		google.charts.setOnLoadCallback(drawChart);
-	
-		function drawChart() {
-			// Define the chart to be drawn.
-			var data = new google.visualization.DataTable();
-			data.addColumn('string', 'Element');
-			data.addColumn('number', 'soma');
-			data.addRows([ ['Variavel', somaa[i]] 
-		
-		  ]);
-		
-			
-	  
-		  var chart = new google.visualization.ColumnChart(document.getElementById('Chart'));
-		  chart.draw(data, somaa[i]);
 		
 	
 		  
@@ -1910,22 +1878,6 @@ if(tipodescritiva == "Qualitativa Ordinal"){
 			
 			}
 			
-			google.charts.load('current', {packages: ['corechart']});
-			google.charts.setOnLoadCallback(drawChart);
-		
-			function drawChart() {
-				// Define the chart to be drawn.
-				var data = new google.visualization.DataTable();
-				data.addColumn('string', 'Element');
-				data.addColumn('number', 'soma');
-				data.addRows([ ['Variavel', somaa[i]] 
-			
-			  ]);
-			
-				
-		  
-			  var chart = new google.visualization.ColumnChart(document.getElementById('Chart'));
-			  chart.draw(data, somaa[i]);
 			
 		
 			  
