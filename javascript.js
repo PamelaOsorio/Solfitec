@@ -204,13 +204,13 @@ for( i = 0; i< splitados.length; i++){
 			}
 		}
 		
-	}
+	
 	 MedianaTotal = (`Mediana: ${splitados[posMEDIANA}`)
-				
-			}
-		}
+          }			
+			
+		
 		medianaT = (`Mediana: ${medianaTotal}`)
-	}
+	
 
 	//-----------------------------------Quintil------------------------------------------------//
 
