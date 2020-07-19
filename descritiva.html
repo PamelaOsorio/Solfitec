@@ -16,7 +16,7 @@
     <title>Descritiva</title>
 
 
-    <link rel="stylesheet" href="css/probabilidade.css">
+    <link rel="stylesheet" type="text/css" href="descritiva.css">
 
 </head>
 <body>
@@ -58,9 +58,18 @@
         </select>
        
        <p></p>
+                <style>
 
 
-
+		body{background: rgb(247, 244, 240)}
+		table{background: rgb(5, 0, 10); font-weight: 600;}
+		h1,p{font-family:arial;}
+		p{font-family:arial;color: rgb(247, 244, 244);}
+		th,td{ border: 2px solid ;color: rgb(247, 244, 244);}
+		th{font-family: arial;}
+		td{padding:5px}
+		table{width:100%}
+       </style>
 
 
        <button type="submit" onclick="entradadosdado()" id="buttondeentrada">ENTRAR COM OS DADOS</button> 
@@ -95,21 +104,24 @@
    
    
    
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-       
-       </script>
-     <body>
+       <body>
        <!-- Identify where the chart should be drawn. -->
-       <div id="Chart" style="width:400; height:300"></div></div>
+       <div id="barraSeparada" style="width:400; height:300"></div>
+       <div id="barraJuntas" style="width:400;"></div>
+       <div id="pieOrdinal" style="width:400"></div>
+       <div id="pieNominal" style="width:400"></div>
      </body>
       
    
      <script src="javascript.js"></script>
+     <script src="https://code.highcharts.com/highcharts.js"></script>
+     <script src="https://code.highcharts.com/modules/exporting.js"></script>
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <input type="file" id="fileUpload" />
     <input type="button" id="upload" value="Upload" onclick="Upload()" />
     <hr />
     <div id="dvExcel"></div>
+
         </div>
        </div>
         </div>
