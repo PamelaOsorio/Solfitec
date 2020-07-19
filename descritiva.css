@@ -1,0 +1,97 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: rgb(250, 252, 164);
+    font-family: sans-serif;
+}
+
+.form{
+    width: 450px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+
+.card{
+    
+    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.card-top{
+    text-align:center;
+    
+}
+
+.card-group{
+    margin-bottom: 11px;
+}
+
+.card-group >label{
+    width: 100%;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+.card-group >input{
+     border-radius: 10px;
+     outline: 0;
+     width: 100%;
+     height: 30px;
+     padding: 5px;
+}
+
+.card-group > button{
+    background-color: rgb(250, 252, 164);
+    width: 100%;
+    border-radius: 45px;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    border: 0px;
+    outline: 0;
+}
+
+.imglogin{
+    border-radius: 400px;
+    width: 100px;
+    box-shadow: 0px 0px 5px darkblue;
+}
+
+.title{
+    color: black;
+}
+
+.card-btn > button{
+    background-color: rgb(250, 252, 164);
+    color: black;
+    border-radius: 45px;
+    border: 0px;
+    outline: 0;
+    width: 100%;
+    padding: 15px;
+    position: center;    
+}
+
+.card-title > h2{
+    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
+    font-size: 85px;
+    font-style: italic, oblique;
+    height: 100px;  
+}
+
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align: center;
+    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
+    color: white;
+    font-family: sans-serif;
+    font-size: large;
+    right: 0px;
+}
+
