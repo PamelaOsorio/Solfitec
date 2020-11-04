@@ -109,7 +109,22 @@
     <div id="dvExcel"></div>
 
    
-   
+   <table class="table mt-4 mb-5" id="tblCrossReference" ng-show="IsVisible">
+                <tr>
+                    <th>Meeting ID</th>
+                    <th>Agenda Item</th>
+                    <th>Legistar ID</th>
+                    <th>Title</th>
+                </tr>
+                <tbody ng-repeat="ai in AgendaItems">
+                    <tr>
+                        <td>{{ai.Myheader1}}</td>
+                        <td>{{ai.Myheader2}}</td>
+                        <td>{{ai.Myheader3}}</td>
+                        <td>{{ai.Myheader4}}</td>
+                    </tr>
+                </tbody>
+            </table>
    
        <body>
        <!-- Identify where the chart should be drawn. -->
