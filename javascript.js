@@ -84,8 +84,9 @@ function ProcessExcel(data) {
 
 	var dvExcel = document.getElementById("dvExcel");
 	dvExcel.innerHTML = "";
-	dvExcel.appendChild(dados);
+	dvExcel.appendChild(table);
 	console.log(dvExcel)
+	console.log(table)
 };
 
 function entradadosdado(){
