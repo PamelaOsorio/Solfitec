@@ -36,7 +36,7 @@
 			<option id='quantd'> Quantitativa Discreta</option>
 			<option id='quantc'> Quantitativa Continua</option>
 
-    </select>
+               </select>
     <p></p>
         <input type="text" id='variavel' placeholder="Variavel pesquisada">
         <p></p>
@@ -50,6 +50,7 @@
                 <option id='decil'>Decil(D1-D10)</option>
                 <option id='porcentil'>Porcentil(1-100)</option>
             </select>
+		
      
             <input type="text" id='valorMedidas' placeholder="Ex:Q1,K2,D8,90">
         <select type="button" id='dispersao'>
@@ -101,6 +102,12 @@
         <div id="desvio"> </div>
         <p> </p>
         <div id="variacao"> </div>
+	      
+    <input type="file" id="fileUpload" />
+    <input type="button" id="upload" value="Upload" onclick="Upload()" />
+    <hr />
+    <div id="dvExcel"></div>
+
    
    
    
@@ -117,11 +124,7 @@
      <script src="https://code.highcharts.com/highcharts.js"></script>
      <script src="https://code.highcharts.com/modules/exporting.js"></script>
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <input type="file" id="fileUpload" />
-    <input type="button" id="upload" value="Upload" onclick="Upload()" />
-    <hr />
-    <div id="dvExcel"></div>
-
+   
         </div>
        </div>
         </div>
