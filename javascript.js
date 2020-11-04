@@ -49,7 +49,12 @@ function ProcessExcel(data) {
 
 	var firstSheet = workbook.SheetNames[0];
 
-	var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[firstSheet]);
+	excelRows = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheet], { header: ["Myheader1", "Myheader2", "Myheader3", "Myheader4"] });
+            //Display the data from Excel file in Table.
+            $scope.$apply(function () {
+                excelRows.shift();
+                $scope.table = excelRows;
+            });
 
 	var table = document.createElement("table");
 	table.border = "1";
