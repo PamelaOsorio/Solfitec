@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Probabilidade</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/probability.css">
+</head>
+<body>
+
+  <!-- NAVBAR NO TOPO -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand logo-title" href="#">SOLFTITEC</a>
+    <div class="collapse navbar-collapse show">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="descritiva.html">Estatística Descritiva</a></li>
+        <li class="nav-item"><a class="nav-link" href="probability.html">Probabilidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="correlation.html">Correlação e Regressão</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+      </ul>
+      <form action="menu.html" class="form-inline">
+        <button class="btn btn-danger btn-sm" type="submit">Voltar</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+ <ul class="nav nav-tabs" id="tabMenu">
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="mostrarAba('binomial')">Distribuição Binomial</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="mostrarAba('normal')">Distribuição Normal</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="mostrarAba('uniforme')">Distribuição Uniforme</a>
+  </li>
+</ul>
+
+
+<div class="container">
+ 
+
+    <!-- Distribuição Binomial -->
+   <div id="binomial" class="aba container mt-4">
+    <div class="text-center">
+        <h3 class="title">Distribuição Binomial</h3>
+      </div>
+     <div class="form-group">
+        <label for="n">Valores de Amostra (n):</label>
+      <input type="text" id="amostra" placeholder="Amostra (n)" class="form-control my-2">
+     </div>
+      <div class="form-group">
+        <label for="p"> Valor de Sucesso:</label>
+      <input type="text" id="sucesso" placeholder="Sucesso (p)" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="q">Valor de Fracasso:</label>
+      <input type="text" id="fracasso" placeholder="Fracasso (q)" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="k">Valores de evento, separados por ponto e vírgula:</label>
+      <input type="text" id="evento" placeholder="Evento (k;1;2;3)" class="form-control">
+       </div>
+       <div class="form-group text-center">
+      <button type="button" class="btn btn-primary" onclick="enviarBinomialAPI()">ENTRAR COM OS DADOS</button>
+
+      </div>
+      <div id="resultado" class="alert alert-primary text-center"></div>
+      <div id="mediabinomial" class="alert alert-info text-center"></div>
+      <div id="desviopadrao" class="alert alert-secondary text-center"></div>
+      <div id="variacao" class="alert alert-success text-center"></div>
+    
+    </div>
+  
+
+    <!-- Distribuição Normal -->
+    <div id="normal" class="aba container mt-4" style="display: none;">
+      <div class="text-center">
+        <h3>Distribuição Normal</h>
+      </div>
+      <div class="form-group">
+     <label for="n">Média:</label>
+      <input type="text" id="media" placeholder="Média" class="form-control">
+      </div>
+      <div class="form-group">
+     <label for="n">Desvio Padrão:</label>
+      <input type="text" id="dp" placeholder="Desvio Padrão" class="form-control">
+      </div>
+       <div class="form-group">
+        <label for="pma">Escolhe entre uma das opções:</label>
+      <select id="opcao" class="form-control my-2">
+        <option value="Entre dois números">Entre dois números</option>
+        <option value="Maior que">Maior que</option>
+        <option value="Menor que">Menor que</option>
+      </select>
+      </div>
+    <div class="form-group">
+     <label for="in">Intervalo:</label>
+      <input type="text" id="intervalo" placeholder="Intervalo (ex: 10;20)" class="form-control">
+    </div>
+      <div class="form-group text-center">
+      <button type="button" onclick="enviarNormalAPI()" class="btn btn-primary">ENTRAR COM OS DADOS</button>
+      </div>
+      <div id="probnormal" class="alert alert-success text-center display:none"></div>
+    </div>
+  
+
+    <!-- Distribuição Uniforme -->
+    <div id="uniforme" class="aba container mt-4" style="display: none;">
+      <div class="card-top text-center">
+        <h3>Distribuição Uniforme</h1>
+      </div>
+      <div class="form-group">
+      <label for="pmi">Ponto Mínimo:</label>
+      <input type="text" id="minimo" placeholder="Ponto Mínimo" class="form-control">
+      </div>
+       <div class="form-group">
+      <label for="pma">Ponto Máximo:</label>
+      <input type="text" id="maximo" placeholder="Ponto Máximo" class="form-control">
+       </div>
+      <div class="form-group">
+        <label for="pma">Escolhe entre uma das opções:</label>
+      <select id="opcao2" class="form-control">
+        <option value="Entre dois números">Entre dois números</option>
+        <option value="Maior que">Maior que</option>
+        <option value="Menor que">Menor que</option>
+      </select>
+      </div>
+      <div class="form-group">
+       <label for="in">Intervalo:</label>
+      <input type="text" id="dados" placeholder="Intervalo (ex: 5;10)" class="form-control">
+    </div>
+      <div class="form-group text-center">
+      <button type="button" onclick="enviarUniformeAPI()" class="btn btn-primary">ENTRAR COM OS DADOS</button>
+      </div>
+      <div id="prob" class="alert alert-primary text-center" ></div>
+      <div id="mediauniforme" class="alert alert-info text-center"></div>
+      <div id="padrao"class="alert alert-secondary text-center"></div>
+      <div id="coeficienteuniforme"  class="alert alert-success text-center"></div>
+    </div>
+  </div>
+
+<!-- Rodapé fora da .container -->
+<footer class="footer-fixado text-center">
+  <small>Todos os direitos reservados</small>
+</footer>
+
+   
+  
+
+  <!-- Scripts -->
+   <script src="binomial.js"></script>
+   <script src="normal.js"></script>
+   <script src="uniforme.js"></script>
+   <script src="probabily_tabs.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+
+</body>
+</html>

@@ -1,339 +1,135 @@
-function binomial(){
-    var n = document.getElementById('amostra').value;
-    var p = document.getElementById('sucesso').value;
-    var q = document.getElementById('fracasso').value;
-    var k = document.getElementById('evento').value;
-      
-    p = p/100
-    q = q/100
+function binomial() {
+  const n = parseInt(document.getElementById('amostra').value);
+  const p = parseFloat(document.getElementById('sucesso').value) / 100;
+  const q = parseFloat(document.getElementById('fracasso').value) / 100;
+  const kInput = document.getElementById('evento').value;
 
-  
-      
-
-        var acumula = 1;
-        for(x=n;x>1;x--) {
-          acumula = acumula * x;
-        }
-        console.log(acumula)
-        
-      
-        console.log(k)
-
-      
-       
- 
-           var acumula1 = 1;
-           for(x=k;x>1;x--) {
-           acumula1 = acumula1 * x;
-         }
-            console.log(acumula1)     
-
-        
-      var valores
-      valores = n - k
-      console.log(valores)
-      if ( ( valores == 0) || (valores == 1) ) {
-    
-        acumula3 = 1;
-        console.log(acumula3)
-     } else {
-
-         var acumula3 = 1;
-         for(x=valores;x>1;x--) {
-         acumula3 = acumula3 * x;
-       }
-          console.log(acumula3)   
-     }
-        var psoma = [], contar, combinar2 = []
-        var qsoma = [], combinar = []
-        for(i=0;i<k.length;i++){
-          psoma = Math.pow (p , k)
-          console.log(psoma)
-          qsoma = Math.pow(q , valores).toFixed(3)
-          console.log(qsoma)   
-          combinar = parseInt( acumula / (acumula1 * acumula3))
-          contar = (combinar * psoma) * qsoma 
-          console.log(combinar)
-          console.log(acumula)
-          console.log(acumula1)
-
-        }
-        k = k.split(";")
-
-        if(k.length > 1){
-
-    
-            var acumula = 1;
-            for(x=n;x>1;x--) {
-              acumula = acumula * x;
-            }
-            console.log(acumula)
-            
-          
-            console.log(k)
-            var acumula4 = 1
-                  for(x=k[0];x>1;x--) {
-                      acumula4 = acumula4 * x;
-                      console.log(acumula4)
-                    }
-
-                    console.log(acumula4)
-  
-              var  acumula5 = 1
-                   for(x=k[1];x>1;x--) {
-                       acumula5 = acumula5 * x;
-                       console.log(acumula5)
-                     }
- 
-                     console.log(acumula5)
-                  if(k.length > 2){    
-
-                 var acumula6 = 1
-
-                     for(x=k[2];x>1;x--) {
-                         acumula6 = acumula6 * x;
-                         console.log(acumula6)
-                       }
-   
-                       console.log(acumula6)
-                     }    
-                if(k.length > 3){
-                  
-                      var acumula7 = 1;
-                       for(x=k[3];x>1;x--) {
-                           acumula7 = acumula7 * x;
-                           console.log(acumula7)
-                         }
-                        
-     
-                         console.log(acumula7)
-                       
-                   }  
-                if(k.length > 4){
-                   
-                  
-                        var acumula8 = 1;
-                         console.log(acumula8)
-                         for(x=k[4];x>1;x--) {
-                             acumula8 = acumula8 * x;
-                       
-                             console.log(acumula8)
-                           }
-                                               
-                }
-              
-              var valores1 = [] 
-        
-          
-          for(i = 0; i < k.length;i++){
-             valores1[i] = parseInt( n - k[i])
-             console.log(valores1[i])
-             console.log(valores1)
-          
-            }
-          var acumulaV = 1
-          
-            acumulaV = 1;
-             for(x=valores1[0];x>1;x--) {
-               acumulaV = acumulaV * x;
-            }
-              console.log(acumulaV)   
-          
-
-           var acumulaV1 = 1;
-             for(x=valores1[1];x>1;x--) {
-               acumulaV1 = acumulaV1 * x;
-            }
-              console.log(acumulaV1)   
-          
-          if(k.length > 2){
-
-    
-            acumulaV2 = 1;
-             for(x=valores1[2];x>1;x--) {
-               acumulaV2 = acumulaV2 * x;
-            }
-              console.log(acumulaV2)   
-          }
-        
-        if(k.length > 3){
-          
-            var acumulaV3 = 1;
-           
-             for(x=valores1[3];x>1;x--) {
-               acumulaV3 = acumulaV3 * x;
-            }
-              console.log(acumulaV3)   
-          }
-        
-        if(k.length > 4){               
-              
-           var acumulaV4 = 1;
-            
-             for(x=valores1[4];x>1;x--) {
-               acumulaV4 = acumulaV4 * x;
-            }
-              console.log(acumulaV4)   
-          }
-        
-        
-        
-        
-            var psoma = [], contar2 = [],combinar = []
-            var qsoma = [], combinar = [] , contar = 0
-             if( k.length === 2){
-              contar2[0] = parseInt(acumula /( acumula4 * acumulaV))
-              contar2[1] = parseInt(acumula / (acumula5 * acumulaV1))
-            }
-            if(k.length === 3){
-              contar2[0] = parseInt(acumula /( acumula4 * acumulaV))
-              contar2[1] = parseInt(acumula / (acumula5 * acumulaV1))
-              contar2[2] = parseInt(acumula / (acumula6 * acumulaV2))
-
-            }
-            if(k.length === 4){
-              contar2[0] = parseInt(acumula /( acumula4 * acumulaV))
-              contar2[1] = parseInt(acumula / (acumula5 * acumulaV1))
-              contar2[2] = parseInt(acumula / (acumula6 * acumulaV2))
-              contar2[3] = parseInt(acumula / (acumula7 * acumulaV3))
-            }
-            if(k.length === 5){
-              contar2[0] = parseInt(acumula /( acumula4 * acumulaV))
-              contar2[1] = parseInt(acumula / (acumula5 * acumulaV1))
-              contar2[2] = parseInt(acumula / (acumula6 * acumulaV2))
-              contar2[3] = parseInt(acumula / (acumula7 * acumulaV3))
-              contar2[4] = parseInt(acumula / (acumula8 * acumulaV4))
-            }
-           
-            
-            console.log(contar2)
-            for(i=0;i<k.length;i++){
-              psoma[i] = Math.pow (p , k[i]).toFixed(4)
-              console.log(psoma)  
-              qsoma[i] = Math.pow(q, valores1[i]).toFixed(4)          
-              console.log(qsoma)   
-              combinar2[i] = parseFloat((contar2[i] * psoma[i]) * qsoma[i])
-              contar += combinar2[i]
-              console.log(combinar2)
-              console.log(acumula)
-              console.log(contar)
-              console.log(acumula1)
-            }
-          
-  
-          console.log(contar2)
-
-
-
-        }
-          contar = (`Probabilidade: ${(contar*100).toFixed(2)}%`)
-          document.getElementById('resultado').innerHTML = contar;
-                 
-
-        
-      
-          
-                
-        //--------------------------------Media----------------------------------//
-        var media = Number(n * p) 
-        var mediacv = Number(n * p)
-        console.log(media)
-        media = (`Media: ${media}`)
-        document.getElementById('mediabinomial').innerHTML = media;
-      
-        //---------------------------------Desvio Padrão-------------------------//
-        var DP = Math.sqrt(n*p*q)
-        var dpcv = Math.sqrt(n*p*q)
-        console.log(DP)
-         DP = (`Desvio Padrão: ${DP.toFixed(2)}`)
-        document.getElementById('desviopadrao').innerHTML = DP;
-        //---------------------------------Coeficiente de variação----------------//
-        var CV = Number(dpcv / mediacv) * 100
-        console.log(CV)
-        CV = (`Coeficiente de variação: ${CV.toFixed(0)}%`)
-        document.getElementById('variacao').innerHTML = CV;
-      
-      
-}
-function normal(){
-var medidas = document.getElementById('opcao').value;
-var medianormal = document.getElementById('media').value;
-var desvioPnormal = document.getElementById('dp').value;
-var intervalo = document.getElementById('intervalo').value;
-var inter = []
-var soma 
-var teste1
-var soma1
-var zt = 0
- inter = intervalo.split(";");
-	console.log(inter.length)
-if( medidas == 'Menor que'){
-  var z = Math.abs((inter - medianormal) / desvioPnormal)
-   zt = z.toFixed(2)
-
-   
-}
-else if(medidas == 'Maior que'){
-  z = (inter - medianormal) / desvioPnormal
-  zt = z.toFixed(2)
- 
-}
-else if(medidas == 'Entre dois números'){
-   soma = inter[0]
-   soma1 = inter[1]
-} 
-     if(soma == medianormal && soma1 > medianormal || soma < medianormal && soma1 == medianormal){                
-         if (  soma == medianormal) {
-            z = parseFloat(soma1 -  medianormal) / desvioPnormal
-            zt = z.toFixed(2)
-
-          } else if ( soma1 == medianormal){
-             z = parseFloat( soma - medianormal) / desvioPnormal
-             zt = z.toFixed(2)
-
-          }
-             console.log(zt)
-      }
-    else if(soma < medianormal && soma1 > medianormal || soma > medianormal && soma1 < medianormal){
-    var z2 , zt2
-    
-      z = parseFloat((soma - medianormal) /  desvioPnormal)
-      console.log(z)
-      zt = z.toFixed(2)
-      z2 = parseFloat((soma1 - medianormal) / desvioPnormal)
-      console.log(z2)
-      zt2 = z2.toFixed(2)
-
+  if (isNaN(n) || isNaN(p) || isNaN(q) || !kInput) {
+    alert("Por favor, preencha todos os campos corretamente.");
+    return;
   }
-  else if(soma > medianormal && soma1 > medianormal){
-    var z2 , zt2
-    
-      z = parseFloat((soma - medianormal) /  desvioPnormal)
-      console.log(z)
-      zt = z.toFixed(2)
-      z2 = parseFloat((soma1 - medianormal) / desvioPnormal)
-      console.log(z2)
-      zt2 = z2.toFixed(2)
 
+  const kValores = kInput.split(";").map(k => parseInt(k.trim()));
+  let somaProbabilidades = 0;
+
+  // Função para calcular fatorial
+  const fatorial = num => {
+    if (num === 0 || num === 1) return 1;
+    let result = 1;
+    for (let i = 2; i <= num; i++) {
+      result *= i;
+    }
+    return result;
+  };
+
+  // Função para calcular a probabilidade binomial
+  const calcularBinomial = (n, k, p, q) => {
+    const combinacao = fatorial(n) / (fatorial(k) * fatorial(n - k));
+    const probabilidade = combinacao * Math.pow(p, k) * Math.pow(q, n - k);
+    return probabilidade;
+  };
+
+  // Cálculo de probabilidade total
+  kValores.forEach(k => {
+    if (k <= n && k >= 0) {
+      const prob = calcularBinomial(n, k, p, q);
+      somaProbabilidades += prob;
+    }
+  });
+
+  const probFinal = (somaProbabilidades * 100).toFixed(2);
+  document.getElementById('resultado').innerHTML = `Probabilidade: ${probFinal}%`;
+
+  // Média
+  const media = (n * p).toFixed(2);
+  document.getElementById('mediabinomial').innerHTML = `Média: ${media}`;
+
+  // Desvio padrão
+  const dp = Math.sqrt(n * p * q).toFixed(2);
+  document.getElementById('desviopadrao').innerHTML = `Desvio Padrão: ${dp}`;
+
+  // Coeficiente de variação
+  const cv = ((dp / media) * 100).toFixed(2);
+  document.getElementById('variacao').innerHTML = `Coeficiente de variação: ${cv}%`;
+
+  document.getElementById('resultado').style.display = 'block';
+  document.getElementById('mediabinomial').style.display = 'block';
+  document.getElementById('desviopadrao').style.display = 'block';
+  document.getElementById('variacao').style.display = 'block';
+}
+
+
+// Função que calcula a probabilidade binomial para k sucessos
+function calcularBinomial(n, p, k) {
+  return combinacao(n, k) * Math.pow(p, k) * Math.pow(1 - p, n - k);
+}
+
+// Função auxiliar para calcular combinações (n choose k)
+function combinacao(n, k) {
+  if (k > n) return 0;
+  if (k === 0 || k === n) return 1;
+  let resultado = 1;
+  for (let i = 1; i <= k; i++) {
+    resultado *= (n - i + 1) / i;
   }
-    console.log(z)
-    console.log(soma)
-    console.log(soma1)
-    console.log(z2)
-    console.log(z)
-    console.log(soma)
-    console.log(soma1)
-    console.log(z2)
+  return resultado;
+}
 
+function exibirResultado(prob) {
+  document.getElementById('resultado').innerHTML = `Probabilidade: ${(prob * 100).toFixed(2)}%`;
+}
 
+function exibirMedia(n, p) {
+  const media = n * p;
+  document.getElementById('mediabinomial').innerHTML = `Média: ${media.toFixed(2)}`;
+}
 
-  
+function exibirDesvioPadrao(n, p, q) {
+  const dp = Math.sqrt(n * p * q);
+  document.getElementById('desviopadrao').innerHTML = `Desvio Padrão: ${dp.toFixed(2)}`;
+}
 
-  let  coluna, linha;
-  let resultado1, resultado2, resultado
-  console.log(zt)
-    var Tabela = [
-      [0.0, 0.0000, 0.0040, 0.0080, 0.0120, 0.0160, 0.0199, 0.0239, 0.0279, 0.0319, 0.0359],
+function exibirCoeficienteVariacao(n, p, q) {
+  const media = n * p;
+  const dp = Math.sqrt(n * p * q);
+  const cv = (dp / media) * 100;
+  document.getElementById('variacao').innerHTML = `Coeficiente de variação: ${cv.toFixed(0)}%`;
+}
+ 
+function normal() {
+  const medidas = document.getElementById('opcao').value;
+  const media = parseFloat(document.getElementById('media').value);
+  const dp = parseFloat(document.getElementById('dp').value);
+  const intervalo = document.getElementById('intervalo').value;
+
+  // Separar e converter intervalo para números
+  const valoresIntervalo = intervalo.split(";").map(Number);
+
+  // Função para calcular o z-score
+  function calcularZ(x) {
+    return (x - media) / dp;
+  }
+
+  // Função para buscar valor na tabela da normal padrão
+  function buscarNaTabela(z) {
+    const absZ = Math.abs(z);
+    const zStr = absZ.toFixed(2);
+    const regex = /(\d)\.(\d)(\d)/;
+    const match = zStr.match(regex);
+
+    if (!match) return null;
+
+    const linha = parseInt(match[1] + match[2]);   // ex: 1.23 -> linha 12
+    const coluna = parseInt(match[3]) + 1;         // ex: 1.23 -> coluna 4 (3 + 1)
+
+    if (!Tabela[linha] || Tabela[linha][coluna] === undefined) return null;
+
+    return Tabela[linha][coluna];
+  }
+
+  // Tabela normal padrão (exemplo parcial)
+  const Tabela = [
+    [0.0, 0.0000, 0.0040, 0.0080, 0.0120, 0.0160, 0.0199, 0.0239, 0.0279, 0.0319, 0.0359],
       [0.1, 0.0398, 0.0438, 0.0478, 0.0517, 0.0557, 0.0596, 0.0636, 0.0675, 0.0714, 0.0753],
       [0.2, 0.0793, 0.0832, 0.0871, 0.0910, 0.0948, 0.0987, 0.1026, 0.1064, 0.1103, 0.1141],
       [0.3, 0.1179, 0.1217, 0.1255, 0.1293, 0.1331, 0.1368, 0.1406, 0.1443, 0.1480, 0.1517],
@@ -373,265 +169,106 @@ else if(medidas == 'Entre dois números'){
       [3.7, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999],
       [3.8, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999],
       [3.9, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000]
-    ]
-   
-            
-    
-  if(( medidas == 'Maior que' && medianormal < inter)) {
-    linha = zt.match(/([0-9]+\.[0-9])([0-9])/);
-       console.log(linha)
-      if (linha == null) {
-        coluna = 1;
-        linha = zt * 10;
-        console.log(linha)
+  ];
 
-      } else {
-        coluna = parseFloat(linha[2]) + 1;
-        linha = linha[1] * 10;
-        console.log(linha)
+  let resultado = 0;
 
-      }
-       teste1 = (Tabela[linha][coluna]) 
-       resultado = ((0.5 - teste1) * 100).toFixed(2)
-      }
-     
-      
-       if(( medidas == 'Maior que' && medianormal > inter)) {
-        linha = zt.match(/([0-9]+\.[0-9])([0-9])/);
-           console.log(linha)
-          if (linha == null) {
-            coluna = 1;
-            linha = zt * 10;
-            console.log(linha)
-    
-          } else {
-            coluna = parseFloat(linha[2]) + 1;
-            linha = linha[1] * 10;
-            console.log(linha)
-    
-          }
-          console.log(coluna)
+  if (medidas === 'Menor que') {
+    // P(X < x)
+    const z = calcularZ(valoresIntervalo[0]);
+    const p = buscarNaTabela(z);
 
-           teste1 = (Tabela[linha][coluna]) 
-           resultado = ((0.5 + teste1) * 100).toFixed(2)
+    if (p === null) return alert('Valor z fora da tabela');
 
-          }
-        
-          if( (medidas == 'Menor que') && (medianormal > inter)){
-            linha = zt.match(/([0-9]+\.[0-9])([0-9])/);
-               console.log(linha)
-              if (linha == null) {
-                coluna = 1;
-                linha = zt * 10;
-                console.log(linha)
-        
-              } else {
-                coluna = parseFloat(linha[2]) + 1;
-                linha = linha[1] * 10;
-                console.log(linha)
-        
-              }
-               teste1 = (Tabela[linha][coluna]) 
-               resultado = ((0.5 - teste1) * 100).toFixed(2)
-              }
-        if(( medidas == 'Menor que' && medianormal < inter)) {
-          linha = zt.match(/([0-9]+\.[0-9])([0-9])/);
-             console.log(linha)
-            if (linha == null) {
-              coluna = 1;
-              linha = zt * 10;
-              console.log(linha)
-      
-            } else {
-              coluna = parseFloat(linha[2]) + 1;
-              linha = linha[1] * 10;
-              console.log(linha)
-      
-            }
-             teste1 = (Tabela[linha][coluna]) 
-             resultado = ((0.5 + teste1) * 100).toFixed(2)
-          }
-            
+    resultado = z < 0 ? (0.5 - p) * 100 : (0.5 + p) * 100;
+  } 
+  else if (medidas === 'Maior que') {
+    // P(X > x) = 1 - P(X < x)
+    const z = calcularZ(valoresIntervalo[0]);
+    const p = buscarNaTabela(z);
 
-        if(( medidas == 'Entre dois números') && (soma == medianormal && soma1 > medianormal || soma < medianormal && soma1 == medianormal || soma < medianormal && soma1 > medianormal)){                
-          linha = zt.match(/([0-9]+\.[0-9])([0-9])/);
-          console.log(linha)
-         if (linha == null) {
-           coluna = 1;
-           linha = zt * 10;
-           console.log(linha)
-   
-         } else {
-           coluna = parseFloat(linha[2]) + 1;
-           linha = linha[1] * 10;
-           console.log(linha)
-   
-         }
-         teste1 = (Tabela[linha][coluna]) 
-         resultado = (teste1*100).toFixed(2)
-         console.log(resultado)
+    if (p === null) return alert('Valor z fora da tabela');
 
-        }
-        if(( medidas == 'Entre dois números') && (soma < medianormal && soma1 > medianormal || soma > medianormal && soma1 < medianormal)){
-          if( soma == soma){
-            linha = zt.match(/([0-9]+\.[0-9])([0-9])/);
-            console.log(linha)
-           if (linha == null) {
-             coluna = 1;
-             linha = zt * 10;
-             console.log(linha)
-     
-           } else {
-             coluna = parseFloat(linha[2]) + 1;
-             linha = linha[1] * 10;
-             console.log(linha)
-     
-           }
-           teste1 = (Tabela[linha][coluna]) 
-           resultado1 = (teste1*100).toFixed(2)
-           console.log(resultado)
-  
+    resultado = z < 0 ? (0.5 + p) * 100 : (0.5 - p) * 100;
+  } 
+  else if (medidas === 'Entre dois números') {
+    // P(a < X < b) = P(X < b) - P(X < a)
+    const z1 = calcularZ(valoresIntervalo[0]);
+    const z2 = calcularZ(valoresIntervalo[1]);
+    const p1 = buscarNaTabela(z1);
+    const p2 = buscarNaTabela(z2);
 
-          }
-          if( soma1 == soma1){
-            linha = zt2.match(/([0-9]+\.[0-9])([0-9])/);
-            console.log(linha)
-           if (linha == null) {
-             coluna = 1;
-             linha = zt2 * 10;
-             console.log(linha)
-     
-           } else {
-             coluna = parseFloat(linha[2]) + 1;
-             linha = linha[1] * 10;
-             console.log(linha)
-     
-           }
-           teste2 = (Tabela[linha][coluna]) 
-           resultado2 = (teste2*100).toFixed(2)
-           console.log(resultado1)
-  
-          }
-            resultado = parseFloat((resultado1/100 + resultado2/100)*100).toFixed(2)
-            console.log(teste1)
+    if (p1 === null || p2 === null) return alert('Valor z fora da tabela');
 
-        }
-        if(( medidas == 'Entre dois números') && (soma > medianormal && soma1 > medianormal )){
-          if( soma == soma){
-            linha = zt.match(/([0-9]+\.[0-9])([0-9])/);
-            console.log(linha)
-           if (linha == null) {
-             coluna = 1;
-             linha = zt * 10;
-             console.log(linha)
-     
-           } else {
-             coluna = parseFloat(linha[2]) + 1;
-             linha = linha[1] * 10;
-             console.log(linha)
-     
-           }
-           teste1 = (Tabela[linha][coluna]) 
-           resultado1 = (teste1*100).toFixed(2)
-           console.log(resultado1)
-  
+    const px1 = z1 < 0 ? 0.5 - p1 : 0.5 + p1;
+    const px2 = z2 < 0 ? 0.5 - p2 : 0.5 + p2;
 
-          }
-          if( soma1 == soma1){
-            linha = zt2.match(/([0-9]+\.[0-9])([0-9])/);
-            console.log(linha)
-           if (linha == null) {
-             coluna = 1;
-             linha = zt2 * 10;
-             console.log(linha)
-     
-           } else {
-             coluna = parseFloat(linha[2]) + 1;
-             linha = linha[1] * 10;
-             console.log(linha)
-     
-           }
-           teste2 = (Tabela[linha][coluna]) 
-           resultado2 = (teste2*100).toFixed(2)
-           console.log(resultado1)
-  
-          }
-            resultado = parseFloat((resultado1/100 - resultado2/100)*100).toFixed(2)
-            resultado = Math.abs(resultado)
-            console.log(resultado)
-
-        }
-
-        resultado = (`Probabilidade: ${resultado}`)
-        document.getElementById('probnormal').innerHTML = resultado;
-
-
-
-      }
-
-        
-      
-     
-         
-function uniforme(){
-var a = document.getElementById('minimo').value;
-var b = document.getElementById('maximo').value;
-var intervaloUni = document.getElementById('dados').value;
-var medidasUni = document.getElementById('opcao2').value;
-var intervalos 
-var uniformeP 
-intervaloUni = intervaloUni.split(";");
-intervalo1 = intervaloUni
-
-
-console.log (intervaloUni[0])
-
-
-for(i = 0; i < intervaloUni; i++){
-  
-  
-  if(medidasUni ==  'Maior que'){
-     intervalos = intervaloUni - b
-     uniformeP = ((1 / (b - a ) * intervalos) * 100).toFixed(0)
-  
-  }  
-  else if(medidasUni == 'Menor que'){
-    intervalos = a - intervaloUni
-    uniformeP = ((1 / (b - a ) * intervalos) * 100).toFixed(0)
+    resultado = (px2 - px1) * 100;
+  } 
+  else {
+    return alert('Selecione uma opção válida!');
   }
-     
-}
- if (medidasUni == 'Entre dois números'){
-    intervalos = intervaloUni[0] - intervaloUni[1]
-    uniformeP = ((1 / (b - a) * intervalos) * 100).toFixed(0)
- }
-
-  
-var mediauniforme = (((a / 100) + (b / 100)) / 2) * 100
-var mediacoe = (((a / 100) + (b / 100)) / 2) * 100
-mediauniforme = (`Média: ${mediauniforme}`)
-document.getElementById('mediauniforme').innerHTML = mediauniforme
-
-var desviouniforme = parseFloat((((b - a) ** 2) / 12) ** 0.5).toFixed(2)
-var variancia = ((((b - a) ** 2) / 12) ** 0.5).toFixed(2)
-desviouniforme = (`Desvio Padrão: ${desviouniforme}`)
-document.getElementById('padrao').innerHTML = desviouniforme;
-
-var CoeficienteV = ((variancia / mediacoe )* 100).toFixed(0)
-CoeficienteV = (`Coeficiente de variação: ${CoeficienteV}%`)
-document.getElementById('coeficienteuniforme').innerHTML = CoeficienteV;
-
-
-uniformeP = (`Probabilidade: ${ Math.abs(uniformeP)}%`)
-document.getElementById('prob').innerHTML = uniformeP;
-
-console.log(a)
-console.log(b)
-console.log(intervalos)
-console.log(intervaloUni)
-console.log(uniformeP)
-console.log(mediauniforme)
-console.log(CoeficienteV)
+  document.getElementById('probnormal').textContent = `Probabilidade: ${resultado.toFixed(2)}%`;
+  document.getElementById('probnormal').style.display = 'block';
 
 }
+function uniforme() {
+  const a = parseFloat(document.getElementById('minimo').value);
+  const b = parseFloat(document.getElementById('maximo').value);
+  const intervaloInput = document.getElementById('dados').value;
+  const medida = document.getElementById('opcao2').value;
 
+  const intervaloArray = intervaloInput.split(";").map(Number);
+  let probabilidade = 0;
+
+  if (medida === 'Maior que') {
+    // P(X > x)
+    const x = intervaloArray[0];
+    if (x < a) probabilidade = 1;
+    else if (x > b) probabilidade = 0;
+    else probabilidade = (b - x) / (b - a);
+
+  } else if (medida === 'Menor que') {
+    // P(X < x)
+    const x = intervaloArray[0];
+    if (x < a) probabilidade = 0;
+    else if (x > b) probabilidade = 1;
+    else probabilidade = (x - a) / (b - a);
+
+  } else if (medida === 'Entre dois números') {
+    // P(x1 < X < x2)
+    let [x1, x2] = intervaloArray;
+
+    // Garantir que x1 < x2
+    if (x1 > x2) [x1, x2] = [x2, x1];
+
+    if (x2 < a || x1 > b) {
+      probabilidade = 0;
+    } else {
+      const limiteInferior = Math.max(x1, a);
+      const limiteSuperior = Math.min(x2, b);
+      probabilidade = (limiteSuperior - limiteInferior) / (b - a);
+      if (probabilidade < 0) probabilidade = 0;
+    }
+
+  } else {
+    probabilidade = 0;
+  }
+
+  const probabilidadePercentual = (probabilidade * 100).toFixed(2);
+  const media = ((a + b) / 2).toFixed(2);
+  const desvioPadrao = Math.sqrt(((b - a) ** 2) / 12).toFixed(2);
+  const coeficienteVariacao = ((desvioPadrao / media) * 100).toFixed(2);
+
+  // Atualizar o DOM
+  document.getElementById('mediauniforme').textContent = `Média: ${media}`;
+  document.getElementById('padrao').textContent = `Desvio Padrão: ${desvioPadrao}`;
+  document.getElementById('coeficienteuniforme').textContent = `Coeficiente de variação: ${coeficienteVariacao}%`;
+  document.getElementById('prob').textContent = `Probabilidade: ${probabilidadePercentual}%`;
+  document.getElementById('mediauniforme').style.display = 'block';
+  document.getElementById('padrao').style.display = 'block';
+  document.getElementById('coeficienteuniforme').style.display = 'block';
+  document.getElementById('prob').style.display = 'block';
+
+  console.log({ a, b, intervaloArray, medida, probabilidadePercentual, media, desvioPadrao, coeficienteVariacao });
+}

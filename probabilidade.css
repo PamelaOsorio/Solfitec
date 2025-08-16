@@ -1,110 +1,184 @@
-*{
-    padding: 0px;
-    margin: 0px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(255, 255, 255);
-    font-family: sans-serif;
-    color:  black;
+body {
+  background-color: #eaf4fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-.form{
-    width: 450px;
-    margin: auto;
-    padding-top: 40px;
-    background-position: left;
+/* ======================
+   NAVBAR
+====================== */
+.navbar {
+  background-color: #003366;
 }
 
-.form1{
-    width: 450px;
-    margin: auto;
-    padding-top: 40px;
-    background-position: center;
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 15px;
 }
 
-.form2{
-    width: 450px;
-    margin: auto;
-    padding-top: 40px;
-    background-position: right;
+.navbar-nav .nav-link:hover {
+  background-color: #005580;
+  border-radius: 5px;
+  color: #00f7ff;
 }
 
-.form2 > button{
-    background-color: rgb(250, 252, 164);
-    background-position: center;
-}
-
-.card{
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-}
-
-.card > button{
-    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
-    width: 100%;
-    border-radius: 45px;
-    padding: 15px;
-    color: rgb(0, 0, 0);
-    border: 0px;
-    outline: 0;
+.container {
+  background: linear-gradient(to right, #cfe9f5, #fce4ec);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 100px; /* adiciona respiro antes do rodapé */
 }
 
 
-.card-group{
-    margin-bottom: 11px;
+/* Título da navbar */
+.logo-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #00f7ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-.card-group >label{
-    width: 100%;
-    color: rgb(0, 0, 0);
-    display: block;
+/* Títulos internos */
+.title {
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.card-group > button{
-    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
-    width: 100%;
-    border-radius: 45px;
-    padding: 15px;
-    color: rgb(0, 0, 0);
-    border: 0px;
-    outline: 0;
+/* ======================
+   FORMULÁRIOS E INPUTS
+====================== */
+.form-group label {
+  font-weight: bold;
+  color: #003366;
 }
 
-.card-btn > button{
-    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
-    color: black;
-    border-radius: 45px;
-    border: 0px;
-    outline: 0;
-    width: 100%;
-    padding: 15px;
-    position: center;
-
+input.form-control,
+input.form-control-file,
+select {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  color: #000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.card-title > h2{
-    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
-    font-size: 85px;
-    font-style: italic, oblique;
-    height: 100px;
-    color: rgb(0, 0, 0);  
+input::placeholder {
+  color: #888;
 }
 
-.footer {
-    position: fixed;
-    bottom:0;
-    width:100%;
+button.btn {
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* Botões personalizados */
+.btn-primary {
+  background-color: #2ecc71;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #27ae60;
+}
+
+.btn-info {
+  background-color: #3498db;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #2980b9;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* ======================
+   RESULTADOS / ALERTAS
+====================== */
+.alert {
+  display: none;
+  font-size: 16px;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.alert-success::before {
+  content: "✔️ ";
+}
+
+.alert-danger::before {
+  content: "❌ ";
+}
+
+.alert-info::before {
+  content: "ℹ️ ";
+}
+
+.alert-secondary::before {
+  content: "📊 ";
+}
+
+/* ======================
+   RODAPÉ
+====================== */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003366;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+/* ======================
+   RESPONSIVIDADE
+====================== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
     text-align: center;
-    background-image:linear-gradient(to right, lightblue, pink, purple, blue, black);
-    color: white;
-    font-family: sans-serif;
-    font-size: large;
-    right: 0px;
+  }
+
+  input,
+  select,
+  button.btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    margin-bottom: 1.5rem;
+  }
 }
 
-select[type="button"]{
-    color: rgb(0, 0, 0); 
+@media (max-width: 576px) {
+  .logo-title {
+    font-size: 24px;
+    text-align: center;
+  }
 }
-

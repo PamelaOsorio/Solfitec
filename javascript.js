@@ -516,21 +516,6 @@ var guardaG
 		}
 		
 	
-
-	
-	
-	
-	
-
-	  
-
-	
-
-	
-	
-	
-
-
 }
 	document.getElementById('moda').innerHTML = moda;
 	document.getElementById('media').innerHTML = mediaTotal;
@@ -3097,9 +3082,6 @@ console.log(dados)
 			
 	
 		}
-	
-	
-	
 	
 }	
 
